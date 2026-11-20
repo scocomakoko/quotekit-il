@@ -1,34 +1,101 @@
 nav.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
-nav.tabs a{padding:8px 12px;border-radius:8px;background:#fff;color:#0a4fd6;text-decoration:none;border:1px solid #0a4fd6;min-height:44px;display:inline-flex;align-items:center}
-nav.tabs a[aria-current]{background:#0a4fd6;color:#fff}
+nav.tabs a{padding:8px 14px;border-radius:999px;background:var(--card);color:var(--link);text-decoration:none;border:1px solid var(--pri);min-height:44px;display:inline-flex;align-items:center;transition:background .15s}
+nav.tabs a:hover{background:var(--soft)}
+nav.tabs a[aria-current]{background:var(--pri);color:var(--on-pri);font-weight:700}
 ul.chk{list-style:none;margin:0;padding:0}
-ul.chk li{border-bottom:1px solid #eee}
-ul.chk label{display:flex;gap:10px;align-items:flex-start;margin:0;padding:10px 4px;min-height:44px;cursor:pointer}
-input[type=checkbox]{width:24px;height:24px;flex:none;margin:0;accent-color:#0a4fd6}
-input[type=text],input[type=number],input[type=date],select{font:inherit;min-height:46px;padding:8px;width:100%;border:1px solid #6b768c;border-radius:8px;background:#fff;color:#172033}
+ul.chk li{border-bottom:1px solid var(--row);display:flex;flex-wrap:wrap;align-items:flex-start}
+ul.chk li:last-child{border-bottom:0}
+ul.chk>li>label:first-child{display:flex;flex:1 1 0;min-width:0;gap:12px;align-items:flex-start;margin:0;padding:10px 4px;min-height:44px;cursor:pointer}
+ul.chk li.ok>label:first-child span{color:var(--tx2)}
+input[type=checkbox]{-webkit-appearance:none;appearance:none;width:26px;height:26px;min-height:0;flex:none;margin:1px 0 0;padding:0;border:2px solid var(--inp-bd);border-radius:8px;background:var(--inp);display:grid;place-content:center;cursor:pointer;transition:background .15s,border-color .15s}
+input[type=checkbox]::before{content:"";width:12px;height:7px;border:solid var(--on-pri);border-width:0 0 3px 3px;transform:rotate(-45deg) scale(0);margin-top:-2px;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+input[type=checkbox]:checked{background:var(--pri);border-color:var(--pri)}
+input[type=checkbox]:checked::before{transform:rotate(-45deg) scale(1)}
+li.tick input[type=checkbox]:checked{animation:pop .3s ease}
+input.fcb{position:absolute;opacity:0;width:1px;height:1px;margin:0;border:0}
+input.fcb::before{content:none}
+.ia{display:flex;flex:none;gap:2px}
+.flagl,.notebtn{display:grid;place-items:center;width:44px;height:44px;min-height:44px;margin:0;padding:0;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--tx2);cursor:pointer;position:relative;transition:background .15s,color .15s}
+.flagl:hover,.notebtn:hover{background:var(--soft);color:var(--tx);transform:none;box-shadow:none;border-color:transparent}
+.flagl:focus-within{outline:3px solid var(--focus);outline-offset:2px}
+.flagl svg,.notebtn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.flagl.on{background:var(--warn);color:var(--bad);border-color:var(--warn-bd)}
+.flagl.on svg{fill:currentColor}
+.notebtn.has{color:var(--link)}
+.note-in{flex:1 1 100%;margin:0 0 8px;min-height:44px}
+.note-in[hidden]{display:none}
+input[type=text],input[type=number],input[type=date],select{font:inherit;min-height:46px;padding:8px;width:100%;border:1px solid var(--inp-bd);border-radius:10px;background:var(--inp);color:var(--tx)}
 label.f{display:block;margin:6px 0}
-label.f>span{display:block;font-size:.9rem;color:#2d3a52}
+label.f>span{display:block;font-size:.9rem;color:var(--tx2)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 table.defects{width:100%;border-collapse:collapse}
-table.defects th,table.defects td{border:1px solid #999;padding:3px;text-align:start;font-size:.85rem}
+table.defects th,table.defects td{border:1px solid var(--inp-bd);padding:3px;text-align:start;font-size:.85rem}
 table.defects input,table.defects select{min-height:40px;padding:4px}
 .sig{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
-.sig div{border-top:1px solid #000;padding-top:4px;font-size:.9rem}
+.sig div{border-top:1px solid var(--tx);padding-top:4px;font-size:.9rem}
 .pfoot,.copy2{display:none}
-.disc{font-size:.85rem;color:#444}
+.disc{font-size:.85rem;color:var(--tx2)}
 .scroll{overflow-x:auto}
+.prog{position:sticky;top:8px;z-index:4;display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:10px 16px;margin:12px 0;box-shadow:var(--sh)}
+.ring{width:64px;height:64px;flex:none}
+.ring circle{fill:none;stroke-width:4}
+.ring .rb{stroke:var(--row)}
+.ring .rf{stroke:var(--pri);stroke-linecap:round;transition:stroke-dasharray .5s ease,stroke .3s}
+.ring text{font-size:10px;font-weight:700;fill:var(--tx);text-anchor:middle;font-family:inherit}
+.prog.done .rf{stroke:var(--ok)}
+.pb{flex:1;min-width:0}
+.pb b{display:block;color:var(--hd)}
+.pb span{display:block;font-size:.92rem;color:var(--tx2)}
+.pm{width:44px;height:auto;flex:none;transform-origin:50% 100%}
+.prog.done .pm{animation:hop .6s ease 2}
+.prog.done{border-color:var(--ok)}
+.burst{position:absolute;inset-inline-end:46px;top:50%;width:0;height:0;pointer-events:none}
+.burst i{position:absolute;width:9px;height:9px;border-radius:50%;opacity:0;background:var(--acc)}
+.prog.done .burst i{animation:burst .9s ease-out}
+.burst i:nth-child(1){--x:-46px;--y:-34px}
+.burst i:nth-child(2){--x:-20px;--y:-48px;background:var(--pri)}
+.burst i:nth-child(3){--x:14px;--y:-50px;background:var(--ok)}
+.burst i:nth-child(4){--x:44px;--y:-32px}
+.burst i:nth-child(5){--x:-52px;--y:6px;background:var(--ok)}
+.burst i:nth-child(6){--x:50px;--y:8px;background:var(--pri)}
+.burst i:nth-child(7){--x:-30px;--y:34px}
+.burst i:nth-child(8){--x:30px;--y:36px;background:var(--ok)}
+.sum h3{margin:1em 0 .3em}
+.sum h4{margin:.8em 0 .1em;font-size:.98rem;color:var(--hd)}
+.sum ul{margin:0;padding-inline-start:1.3em}
+.sum li{margin:.15em 0}
+.sum .nt{color:var(--tx2)}
+.sum textarea{min-height:140px;margin-top:8px}
+.sum textarea[hidden]{display:none}
+.sbtns{display:flex;flex-wrap:wrap;gap:8px}
+.sbtns .btn,.sbtns button{margin:0}
+.msg{min-height:1.4em;color:var(--ok);font-weight:600}
+.imp{margin:8px 0}
+@keyframes pop{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-12px) rotate(-6deg)}70%{transform:translateY(0) rotate(4deg)}}
+@keyframes burst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(.4)}}
+@media(max-width:480px){.sbtns .btn,.sbtns button{flex:1 1 100%}.prog{padding:8px 12px}}
 @media print{
 @page{size:A4;margin:14mm}
 body{background:#fff;font-size:11pt;color:#000}
 main{max-width:none;padding:0}
-.skip,.site-header,.site-footer,nav.tabs,.noprint,.tip,.cards{display:none!important}
-section{box-shadow:none;border:0;border-radius:0;padding:0;margin:8px 0}
+.skip,.site-header,.site-footer,nav.tabs,.noprint,.tip,.cards,.prog,.notebtn,.sbtns,.sum .hintp{display:none!important}
+section{box-shadow:none;border:0;border-radius:0;padding:0;margin:8px 0;background:#fff}
 ul.chk li{break-inside:avoid;border-bottom:1px dotted #999}
-ul.chk label{padding:3px 2px;min-height:0}
-input[type=checkbox]{width:14px;height:14px}
+ul.chk>li>label:first-child{padding:3px 2px;min-height:0}
+input[type=checkbox]{width:14px;height:14px;border:1px solid #000;border-radius:2px;background:#fff}
+input[type=checkbox]:checked{background:#fff;border-color:#000}
+input[type=checkbox]::before{border-color:#000;width:8px;height:4px;border-width:0 0 2px 2px}
+.ia{display:none}
+.ia:has(.flagl.on){display:flex}
+.flagl{display:none;width:auto;height:auto;min-height:0}
+.flagl.on{display:grid;border:0;background:none;color:#000}
 input[type=text],input[type=number],input[type=date],select{border:0;border-bottom:1px solid #000;border-radius:0;min-height:0;padding:2px;background:none;appearance:none}
+.note-in[hidden]{display:none!important}
 .warn{border:1px solid #000;background:none}
 .pfoot{display:block;margin-top:10px;font-size:.85rem;border-top:1px solid #999;padding-top:4px}
 .copy2.on{display:block;break-before:page}
 table.defects tr{break-inside:avoid}
+#sumLeft{display:none}
+.sum textarea{display:none!important}
 }

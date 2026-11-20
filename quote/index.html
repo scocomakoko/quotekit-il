@@ -6,43 +6,58 @@
 <meta name="theme-color" content="#0f2a5c">
 <meta property="og:title" content="הצעת מחיר ומע&quot;מ לפרילנסרים | QuoteKit IL">
 <meta property="og:description" content="הצעת מחיר מסודרת ללקוח, עם מע&quot;מ מחושב, בדקה.">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="style.css"></head>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="style.css"><script src="../site.js" defer></script></head>
 <body><a class="skip" href="#calc" data-he="מעבר לתוכן" data-en="Skip to content">מעבר לתוכן</a>
-<header class="site-header"><div class="wrap"><a class="brand" href="../index.html" lang="en" dir="ltr">QuoteKit IL</a><nav class="site-nav" aria-label="ניווט ראשי"><a href="../index.html#tools" data-he="כלים" data-en="Tools">כלים</a><a href="../quote/" aria-current="page" data-he="הצעת מחיר" data-en="Quote">הצעת מחיר</a><a href="../dira/" data-he="צ'קליסטים לדירה" data-en="Apartment checklists">צ'קליסטים לדירה</a><a href="../index.html#guides" data-he="מדריכים" data-en="Guides">מדריכים</a></nav></div></header>
-<main>
-<p class="langbar"><button class="alt" id="langBtn" type="button" lang="en">English</button></p>
+<header class="site-header"><div class="wrap"><a class="brand" href="../index.html" lang="en" dir="ltr"><img class="logo" src="../mascot.svg" alt="" width="30" height="32"><span>QuoteKit IL</span></a><nav class="site-nav" aria-label="ניווט ראשי"><a href="../index.html#tools" data-he="כלים" data-en="Tools">כלים</a><a href="../quote/" aria-current="page" data-he="הצעת מחיר" data-en="Quote">הצעת מחיר</a><a href="../dira/" data-he="צ'קליסטים לדירה" data-en="Apartment checklists">צ'קליסטים לדירה</a><a href="../index.html#guides" data-he="מדריכים" data-en="Guides">מדריכים</a></nav></div></header>
+<main class="wide">
+<p class="langbar noprint"><button class="alt" id="langBtn" type="button" lang="en">English</button></p>
 
-<section id="hero" class="hero"><h1 data-he="הצעת מחיר מסודרת ללקוח, עם מע&quot;מ מחושב, בדקה" data-en="A clean client quote with VAT worked out, in one minute">הצעת מחיר מסודרת ללקוח, עם מע"מ מחושב, בדקה</h1>
-<p data-he="מוסיפים שורות, והמחשבון מחשב סכום ביניים, מע&quot;מ וסה&quot;כ. מדפיסים ל-PDF, גם מהטלפון. בלי הרשמה, והכול נשאר בדפדפן שלך." data-en="Add line items and get subtotal, VAT and total. Print to PDF, even from your phone. No sign-up; it all stays in your browser.">מוסיפים שורות, והמחשבון מחשב סכום ביניים, מע"מ וסה"כ. מדפיסים ל-PDF, גם מהטלפון. בלי הרשמה, והכול נשאר בדפדפן שלך.</p>
-<p class="cta"><a class="btn" href="#calc" data-he="למחשבון" data-en="Try the calculator">למחשבון</a> <a class="tl" href="#template" data-he="או הורדת תבנית לאקסל, חינם" data-en="or download the free Excel template">או הורדת תבנית לאקסל, חינם</a></p>
-<div class="prev" aria-hidden="true"><p class="pt"><b data-he="דוגמה: ככה נראית הצעה מוכנה" data-en="Example: a finished quote">דוגמה: ככה נראית הצעה מוכנה</b></p>
-<p><span data-he="עיצוב לוגו" data-en="Logo design">עיצוב לוגו</span><bdi dir="ltr" data-he="₪1,500.00" data-en="$1,500.00">₪1,500.00</bdi></p>
-<p><span data-he="שעות ייעוץ (4 × 250)" data-en="Consulting hours (4 x 250)">שעות ייעוץ (4 × 250)</span><bdi dir="ltr" data-he="₪1,000.00" data-en="$1,000.00">₪1,000.00</bdi></p>
-<p class="pl"><span data-he="סכום ביניים" data-en="Subtotal">סכום ביניים</span><bdi dir="ltr" data-he="₪2,500.00" data-en="$2,500.00">₪2,500.00</bdi></p>
-<p><span data-he="מע&quot;מ (18%)" data-en="VAT (18%)">מע"מ (18%)</span><bdi dir="ltr" data-he="₪450.00" data-en="$450.00">₪450.00</bdi></p>
-<p class="pg"><span data-he="סה&quot;כ לתשלום" data-en="Total due">סה"כ לתשלום</span><bdi dir="ltr" data-he="₪2,950.00" data-en="$2,950.00">₪2,950.00</bdi></p></div>
-<noscript><p class="warn">המחשבון צריך JavaScript. את התבנית אפשר להוריד גם בלעדיו: <a href="quote-template.csv" download>תבנית לאקסל (CSV)</a></p></noscript></section>
+<section id="hero" class="hero"><div><h1 data-he="הצעת מחיר מסודרת ללקוח, עם מע&quot;מ מחושב, בדקה" data-en="A clean client quote with VAT worked out, in one minute">הצעת מחיר מסודרת ללקוח, עם מע"מ מחושב, בדקה</h1>
+<p data-he="מוסיפים שורות ורואים את ההצעה נבנית מולך. אחר כך שולחים בוואטסאפ או מדפיסים ל-PDF, גם מהטלפון. בלי הרשמה, והכול נשאר בדפדפן שלך." data-en="Add line items and watch the quote build itself. Then send it on WhatsApp or print to PDF, even from your phone. No sign-up; it all stays in your browser.">מוסיפים שורות ורואים את ההצעה נבנית מולך. אחר כך שולחים בוואטסאפ או מדפיסים ל-PDF, גם מהטלפון. בלי הרשמה, והכול נשאר בדפדפן שלך.</p>
+<p class="cta"><a class="btn" href="#calc" data-he="לכתוב הצעה" data-en="Write a quote">לכתוב הצעה</a> <a class="tl" href="#template" data-he="או הורדת תבנית לאקסל, חינם" data-en="or download the free Excel template">או הורדת תבנית לאקסל, חינם</a></p>
+<noscript><p class="warn">המחשבון צריך JavaScript. את התבנית אפשר להוריד גם בלעדיו: <a href="quote-template.csv" download>תבנית לאקסל (CSV)</a></p></noscript></div>
+<div class="mw"><p class="bubble" data-he="בוא נכתוב הצעה" data-en="Let's write a quote">בוא נכתוב הצעה</p><img class="mascot" src="../mascot.svg" alt="" width="112" height="118"></div></section>
 
+<div class="qgrid">
 <section id="calc" tabindex="-1"><h2 data-he="מחשבון חינמי" data-en="Free calculator">מחשבון חינמי</h2>
-<p class="hint" data-he="מילאנו דוגמה. מחליפים בפרטים שלך ומדפיסים ל-PDF. הסכומים בשקלים, והמע&quot;מ 18%." data-en="A sample is filled in. Replace it with your own lines, then print to PDF. Amounts are in US dollars.">מילאנו דוגמה. מחליפים בפרטים שלך ומדפיסים ל-PDF. הסכומים בשקלים, והמע"מ 18%.</p>
+<p class="hint" data-he="מילאנו דוגמה. מחליפים בשורות שלך, וההצעה בצד נבנית תוך כדי הקלדה. הסכומים בשקלים, והמע&quot;מ 18%." data-en="A sample is filled in. Swap in your own lines and the quote next to it updates as you type. Amounts are in US dollars.">מילאנו דוגמה. מחליפים בשורות שלך, וההצעה בצד נבנית תוך כדי הקלדה. הסכומים בשקלים, והמע"מ 18%.</p>
 <label><span data-he="סוג עוסק" data-en="Business type">סוג עוסק</span>
 <select id="dealer"><option value="licensed" data-he="עוסק מורשה (עם מע&quot;מ)" data-en="Licensed dealer (with VAT)">עוסק מורשה (עם מע"מ)</option><option value="exempt" data-he="עוסק פטור (ללא מע&quot;מ)" data-en="Exempt dealer (no VAT)">עוסק פטור (ללא מע"מ)</option></select></label>
+<div class="presets"><span class="sm" data-he="הוספה מהירה" data-en="Quick add">הוספה מהירה</span><div id="presetChips" class="chips"></div>
+<details id="presetDet"><summary data-he="עריכת הקיצורים" data-en="Edit shortcuts">עריכת הקיצורים</summary><p class="hint" data-he="הערכים כאן הם רק התחלה. מחליפים בשם ובמחיר שלך, והם נשמרים במכשיר הזה." data-en="These are just a starting point. Swap in your own names and prices; they are saved on this device.">הערכים כאן הם רק התחלה. מחליפים בשם ובמחיר שלך, והם נשמרים במכשיר הזה.</p><div id="presetEdit"></div></details></div>
 <div id="items"></div>
 <div class="actions"><button type="button" class="alt" id="addRow" data-he="+ הוספת שורה" data-en="+ Add line">+ הוספת שורה</button> <button type="button" class="alt" id="clearBtn" data-he="ניקוי הדוגמה" data-en="Clear sample">ניקוי הדוגמה</button></div>
 <div class="tot" role="status" aria-live="off" aria-atomic="true">
 <p><span data-he="סכום ביניים" data-en="Subtotal">סכום ביניים</span><b dir="ltr" id="sub">0.00</b></p>
 <p><span id="vatLbl" data-he="מע&quot;מ" data-en="VAT">מע"מ</span><b dir="ltr" id="vatAmt">0.00</b></p>
 <p class="grand"><span data-he="סה&quot;כ לתשלום" data-en="Total due">סה"כ לתשלום</span><b dir="ltr" id="total">0.00</b></p></div>
-<div class="cta2"><p data-he="יצא טוב? יש גם תבנית לאקסל, להורדה חינם." data-en="Worked for you? There is also a free Excel template.">יצא טוב? יש גם תבנית לאקסל, להורדה חינם.</p><a class="btn ghost" href="#template" data-he="לתבנית" data-en="To the template">לתבנית</a></div>
-<h3 data-he="פרטים להדפסה" data-en="Details for print">פרטים להדפסה</h3>
+<h3 data-he="פרטי ההצעה" data-en="Quote details">פרטי ההצעה</h3>
+<div class="two">
 <label><span data-he="שם העסק" data-en="Business name">שם העסק</span><input id="biz" autocomplete="organization"></label>
 <label><span data-he="מספר עוסק" data-en="Business ID">מספר עוסק</span><input id="bizId" inputmode="numeric" dir="ltr"></label>
 <label><span data-he="שם הלקוח" data-en="Client name">שם הלקוח</span><input id="client"></label>
+<label><span data-he="מספר הצעה (אוטומטי)" data-en="Quote no. (automatic)">מספר הצעה (אוטומטי)</span><input id="qnum" dir="ltr" autocomplete="off"></label>
+<label><span data-he="תאריך" data-en="Date">תאריך</span><input id="qdate" type="date" dir="ltr"></label>
 <label><span data-he="תוקף ההצעה (ימים)" data-en="Quote valid for (days)">תוקף ההצעה (ימים)</span><input id="validity" type="number" inputmode="numeric" dir="ltr" min="0" value="30"></label>
 <label><span data-he="תנאי תשלום" data-en="Payment terms">תנאי תשלום</span><input id="terms" value="שוטף + 30"></label>
-<button type="button" id="printBtn" data-he="הדפסה או שמירה כ-PDF" data-en="Print or save as PDF">הדפסה או שמירה כ-PDF</button>
-<div id="postAsk" class="ask" hidden><p data-he="מוכן. אם זה חסך לך זמן, אפשר לפרגן ב-₪4. לא חובה." data-en="Done. If this saved you time, you can chip in $1. Totally optional.">מוכן. אם זה חסך לך זמן, אפשר לפרגן ב-₪4. לא חובה.</p><a class="btn" id="payBtn2" href="https://paypal.me/QuoteKitIL/4ILS" target="_blank" rel="noopener noreferrer">לפרגן ב-<bdi dir="ltr">₪4</bdi> (PayPal)</a></div>
+<label><span data-he="הערות ותנאים (לא חובה)" data-en="Notes and terms (optional)">הערות ותנאים (לא חובה)</span><textarea id="notes" rows="2"></textarea></label></div>
+<div class="remember"><label class="rem"><input type="checkbox" id="remember"><span data-he="זכור את הפרטים שלי" data-en="Remember my details">זכור את הפרטים שלי</span></label><button type="button" class="alt" id="forgetBtn" data-he="מחק" data-en="Delete">מחק</button></div>
+<p id="remMsg" class="msg" role="status"></p>
+<p class="hint" data-he="שם העסק, מספר עוסק, תנאים והקיצורים נשמרים רק במכשיר הזה, ולא נשלחים לשום מקום. &quot;מחק&quot; מסיר אותם." data-en="Business name, ID, terms and shortcuts are saved only on this device and never sent anywhere. Delete removes them.">שם העסק, מספר עוסק, תנאים והקיצורים נשמרים רק במכשיר הזה, ולא נשלחים לשום מקום. "מחק" מסיר אותם.</p>
 <p class="note" data-he="זו הצעת מחיר, לא חשבונית מס ולא ייעוץ משפטי או מיסויי." data-en="This is a quote, not a tax invoice (חשבונית מס), and not legal or tax advice.">זו הצעת מחיר, לא חשבונית מס ולא ייעוץ משפטי או מיסויי.</p></section>
+
+<div class="pv"><h2 class="pvh noprint" data-he="ככה זה נראה ללקוח" data-en="What your client sees">ככה זה נראה ללקוח</h2>
+<section id="quote"><div id="qEmpty" class="empty noprint" hidden><img src="../mascot.svg" alt="" width="56" height="59"><p data-he="ההצעה עוד ריקה. מוסיפים שורה ורואים אותה כאן." data-en="The quote is still empty. Add a line and you will see it here.">ההצעה עוד ריקה. מוסיפים שורה ורואים אותה כאן.</p></div>
+<h2 id="qTitle" data-he="הצעת מחיר" data-en="Quote">הצעת מחיר</h2><dl id="qMeta"></dl><table id="qTable"></table>
+<table id="qTot"></table><p id="qVat"></p><p id="qNotes"></p><p class="qfoot" data-he="זו הצעת מחיר, לא חשבונית מס. המחירים לפני מע&quot;מ, אלא אם כתוב אחרת." data-en="Quote only, not a tax invoice. Prices exclude VAT unless stated otherwise.">זו הצעת מחיר, לא חשבונית מס. המחירים לפני מע"מ, אלא אם כתוב אחרת.</p></section>
+<div class="pact noprint">
+<button type="button" id="copyBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/></svg><span data-he="העתק כהודעת וואטסאפ" data-en="Copy as WhatsApp message">העתק כהודעת וואטסאפ</span></button>
+<a class="btn wa" id="waBtn" href="#calc" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20l1.3-4A8 8 0 1 1 9 18.7z"/></svg><span data-he="פתח בוואטסאפ" data-en="Open in WhatsApp">פתח בוואטסאפ</span></a>
+<button type="button" class="alt" id="printBtn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2M7 14h10v7H7z"/></svg><span data-he="הדפסה או שמירה כ-PDF" data-en="Print or save as PDF">הדפסה או שמירה כ-PDF</span></button>
+<button type="button" class="alt" id="newBtn" data-he="הצעה חדשה" data-en="New quote">הצעה חדשה</button>
+<p id="copyMsg" class="msg" role="status"></p><textarea id="copyBox" readonly hidden aria-label="הטקסט להעתקה"></textarea>
+<div id="postAsk" class="ask" hidden><p data-he="מוכן. אם זה חסך לך זמן, אפשר לפרגן ב-₪4. לא חובה." data-en="Done. If this saved you time, you can chip in $1. Totally optional.">מוכן. אם זה חסך לך זמן, אפשר לפרגן ב-₪4. לא חובה.</p><a class="btn" id="payBtn2" href="https://paypal.me/QuoteKitIL/4ILS" target="_blank" rel="noopener noreferrer">לפרגן ב-<bdi dir="ltr">₪4</bdi> (PayPal)</a></div></div></div>
+</div>
 
 <section id="template"><h2 data-he="תבנית להורדה" data-en="Downloadable template">תבנית להורדה</h2>
 <ul class="list"><li data-he="קובץ CSV שנפתח באקסל, ב-Google Sheets וב-Numbers" data-en="CSV file that opens in Excel, Google Sheets and Numbers">קובץ CSV שנפתח באקסל, ב-Google Sheets וב-Numbers</li><li data-he="נוסחאות מוכנות: סכום ביניים, מע&quot;מ וסה&quot;כ מתעדכנים לבד" data-en="Live formulas: subtotal, VAT and total update on their own">נוסחאות מוכנות: סכום ביניים, מע"מ וסה"כ מתעדכנים לבד</li><li data-he="מקום לפרטי העסק והלקוח, בעברית" data-en="Fields for business and client details">מקום לפרטי העסק והלקוח, בעברית</li></ul>
@@ -52,10 +67,7 @@
 <a class="btn ghost" id="dlLink" href="quote-template.csv" download data-he="הורדת התבנית לאקסל (CSV)" data-en="Download template for Excel (CSV)">הורדת התבנית לאקסל (CSV)</a></section>
 
 <section id="trust"><h2 data-he="פרטיות" data-en="Privacy">פרטיות</h2>
-<p data-he="אין הרשמה. מה שמקלידים כאן נשאר בדפדפן ולא נשלח לשום שרת. אם בא לך לפרגן, זה רק דרך PayPal." data-en="No sign-up. What you type here stays in your browser and is not sent to any server. If you want to chip in, it is through PayPal only.">אין הרשמה. מה שמקלידים כאן נשאר בדפדפן ולא נשלח לשום שרת. אם בא לך לפרגן, זה רק דרך PayPal.</p></section>
-
-<section id="quote"><h2 id="qTitle" data-he="הצעת מחיר" data-en="Quote">הצעת מחיר</h2><dl id="qMeta"></dl><table id="qTable"></table>
-<table id="qTot"></table><p id="qVat"></p><p data-he="זו הצעת מחיר, לא חשבונית מס. המחירים לפני מע&quot;מ, אלא אם כתוב אחרת." data-en="Quote only, not a tax invoice. Prices exclude VAT unless stated otherwise.">זו הצעת מחיר, לא חשבונית מס. המחירים לפני מע"מ, אלא אם כתוב אחרת.</p></section>
+<p data-he="אין הרשמה. מה שמקלידים כאן נשאר בדפדפן ולא נשלח לשום שרת. וואטסאפ נפתח רק כשלוחצים עליו, ואם בא לך לפרגן, זה רק דרך PayPal." data-en="No sign-up. What you type here stays in your browser and is not sent to any server. WhatsApp opens only when you tap it, and if you want to chip in, it is through PayPal only.">אין הרשמה. מה שמקלידים כאן נשאר בדפדפן ולא נשלח לשום שרת. וואטסאפ נפתח רק כשלוחצים עליו, ואם בא לך לפרגן, זה רק דרך PayPal.</p></section>
 </main>
-<footer class="site-footer"><div class="wrap"><p><a class="brand" href="../index.html" lang="en" dir="ltr">QuoteKit IL</a></p><p data-he="כלים חינמיים בעברית, שרצים בדפדפן. בלי הרשמה, ובלי לשלוח את מה שמקלידים לשרת." data-en="Free tools that run in your browser. No sign-up, and what you type is never sent to a server.">כלים חינמיים בעברית, שרצים בדפדפן. בלי הרשמה, ובלי לשלוח את מה שמקלידים לשרת.</p><nav class="fl" aria-label="קישורים בתחתית העמוד"><a href="../quote/" data-he="מחשבון הצעת מחיר" data-en="Quote calculator">מחשבון הצעת מחיר</a><a href="../dira/" data-he="צ'קליסטים לדירה" data-en="Apartment checklists">צ'קליסטים לדירה</a><a href="../how-to-write-a-quote.html" data-he="איך כותבים הצעת מחיר" data-en="How to write a quote">איך כותבים הצעת מחיר</a><a href="../how-to-calculate-vat-on-a-quote.html" data-he="מע"מ בהצעת מחיר" data-en="VAT on a quote">מע"מ בהצעת מחיר</a><a href="../what-a-quote-must-include.html" data-he="מה כוללים בהצעת מחיר" data-en="What a quote should include">מה כוללים בהצעת מחיר</a></nav><p data-he="כלי עזר כללי בלבד. זה לא ייעוץ משפטי, הנדסי או מיסויי." data-en="General utility only. Not legal, engineering or tax advice.">כלי עזר כללי בלבד. זה לא ייעוץ משפטי, הנדסי או מיסויי.</p></div></footer>
+<footer class="site-footer"><div class="wrap"><p><a class="brand" href="../index.html" lang="en" dir="ltr"><img class="logo" src="../mascot.svg" alt="" width="30" height="32"><span>QuoteKit IL</span></a></p><p data-he="כלים חינמיים בעברית, שרצים בדפדפן. בלי הרשמה, ובלי לשלוח את מה שמקלידים לשרת." data-en="Free tools that run in your browser. No sign-up, and what you type is never sent to a server.">כלים חינמיים בעברית, שרצים בדפדפן. בלי הרשמה, ובלי לשלוח את מה שמקלידים לשרת.</p><nav class="fl" aria-label="קישורים בתחתית העמוד"><a href="../quote/" data-he="מחשבון הצעת מחיר" data-en="Quote calculator">מחשבון הצעת מחיר</a><a href="../dira/" data-he="צ'קליסטים לדירה" data-en="Apartment checklists">צ'קליסטים לדירה</a><a href="../how-to-write-a-quote.html" data-he="איך כותבים הצעת מחיר" data-en="How to write a quote">איך כותבים הצעת מחיר</a><a href="../how-to-calculate-vat-on-a-quote.html" data-he="מע"מ בהצעת מחיר" data-en="VAT on a quote">מע"מ בהצעת מחיר</a><a href="../what-a-quote-must-include.html" data-he="מה כוללים בהצעת מחיר" data-en="What a quote should include">מה כוללים בהצעת מחיר</a></nav><p data-he="כלי עזר כללי בלבד. זה לא ייעוץ משפטי, הנדסי או מיסויי." data-en="General utility only. Not legal, engineering or tax advice.">כלי עזר כללי בלבד. זה לא ייעוץ משפטי, הנדסי או מיסויי.</p></div></footer>
 <script src="app.js"></script></body></html>

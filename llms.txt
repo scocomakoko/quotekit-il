@@ -15,3 +15,8 @@ Pages:
 - [How to write a quote for a client](https://scocomakoko.github.io/quotekit-il/how-to-write-a-quote.html): Hebrew guide
 - [VAT on a quote: licensed vs exempt dealer](https://scocomakoko.github.io/quotekit-il/how-to-calculate-vat-on-a-quote.html): Hebrew explainer
 - [What a quote should include](https://scocomakoko.github.io/quotekit-il/what-a-quote-must-include.html): Hebrew checklist
+
+More features (all client-side, localStorage only):
+- Quote tool: live preview, copy as WhatsApp message or open wa.me link on tap, automatic quote number, customizable quick-add lines, optional remembered business details.
+- Checklists: progress ring, per-item flag and note, defect summary, copy remaining items as WhatsApp text, import flagged items into the printable defect list.
+- Light and dark themes with a toggle.

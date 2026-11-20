@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 84" width="80" height="84"><title>עפרון</title>
+<ellipse cx="40" cy="80" rx="17" ry="3" fill="#1b2437" opacity=".18"/>
+<path d="M28 41 L18 49" stroke="#1b2437" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+<path d="M52 41 L63 32" stroke="#1b2437" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+<circle cx="64.5" cy="30.5" r="3" fill="#ffd36b" stroke="#1b2437" stroke-width="2"/>
+<rect x="28" y="6" width="24" height="10" rx="4" fill="#ff8fa3" stroke="#1b2437" stroke-width="2.2"/>
+<rect x="28" y="15" width="24" height="6" fill="#c3cde0" stroke="#1b2437" stroke-width="2.2"/>
+<rect x="28" y="21" width="24" height="38" fill="#ffc933" stroke="#1b2437" stroke-width="2.2"/>
+<path d="M45 22v36" stroke="#f2a900" stroke-width="3"/>
+<path d="M28 59h24L40 76z" fill="#f6d9ae" stroke="#1b2437" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M36.5 69.5h7L40 76z" fill="#1b2437"/>
+<circle cx="35" cy="36" r="2.6" fill="#1b2437"/><circle cx="45" cy="36" r="2.6" fill="#1b2437"/>
+<circle cx="35.9" cy="35.1" r=".9" fill="#fff"/><circle cx="45.9" cy="35.1" r=".9" fill="#fff"/>
+<path d="M35 43q5 5 10 0" stroke="#1b2437" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<circle cx="31.5" cy="41" r="2" fill="#ff8fa3" opacity=".7"/><circle cx="48.5" cy="41" r="2" fill="#ff8fa3" opacity=".7"/>
+</svg>
