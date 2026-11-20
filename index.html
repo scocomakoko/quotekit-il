@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; form-action 'none'; base-uri 'none'"><meta name="referrer" content="no-referrer">
+<title>הצעת מחיר + מע"מ | Quote + VAT worksheet</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<div class="top"><strong>QuoteKit IL</strong><button class="alt" id="langBtn" type="button">English</button></div>
+<section><h1 data-he="תבנית הצעת מחיר + מע&quot;מ לפרילנסרים בישראל" data-en="Israel freelancer quote + VAT worksheet"></h1>
+<p data-he="מחשבון חינמי בדף, תצוגת הדפסה ל-PDF, ותבנית להורדה ב-$1 (כ-₪4)." data-en="Free in-page calculator, print-to-PDF quote, and a downloadable template for $1 (~₪4)."></p>
+<p class="warn" data-he="זהו גיליון הצעת מחיר/תמחור, לא חשבונית מס. אין כאן ייעוץ משפטי או מס. מי שרוכש: בחרו 'סחורות ושירותים' (Goods &amp; Services)." data-en="This is a quote/pricing worksheet, NOT a tax invoice (חשבונית מס). Not legal or tax advice. Buyers: choose Goods &amp; Services on PayPal."></p></section>
+
+<section><h2 data-he="מחשבון חינמי" data-en="Free calculator"></h2>
+<label><span id="vatLbl"></span>
+<input id="vat" type="number" step="0.1" min="0" value="18"></label>
+<label><span data-he="נכון לתאריך" data-en="Rate as of date"></span><input id="vatDate" type="text" value="2025-01"></label>
+<div id="items"></div><button type="button" class="alt" id="addRow" data-he="+ שורה" data-en="+ Row"></button>
+<div class="tot"><p><span data-he="סכום ביניים" data-en="Subtotal"></span><b id="sub">0.00</b></p>
+<p><span data-he="מע&quot;מ" data-en="VAT"></span><b id="vatAmt">0.00</b></p>
+<p><span data-he="סה&quot;כ" data-en="Total"></span><b id="total">0.00</b></p></div>
+<label><span data-he="שם העסק" data-en="Business name"></span><input id="biz"></label>
+<label><span data-he="לקוח" data-en="Client"></span><input id="client"></label>
+<button type="button" id="printBtn" data-he="הדפסה / שמירה כ-PDF" data-en="Print / save as PDF"></button></section>
+
+<section><h2 data-he="תבנית להורדה" data-en="Downloadable template"></h2>
+<p data-he="שיטת אמון: שלמו מה שהוגן ($1 מומלץ), והקישור להורדה גלוי לכולם." data-en="Honor system: pay what's fair ($1 suggested). The download link is visible to everyone."></p>
+<a class="btn" id="payBtn" href="#" target="_blank" rel="noopener noreferrer"></a><br>
+<a id="dlLink" href="quote-template.csv" download data-he="הורדת התבנית (CSV, נפתח באקסל)" data-en="Download template (CSV, opens in Excel)"></a></section>
+
+<section id="quote"><h1 data-he="הצעת מחיר" data-en="Quote"></h1><p id="qMeta"></p><table id="qTable" width="100%" border="1" cellspacing="0" cellpadding="4"></table>
+<p id="qTot"></p><p data-he="הצעת מחיר בלבד, אינה חשבונית מס." data-en="Quote only, not a tax invoice."></p></section>
+</main><script src="app.js"></script></body></html>
