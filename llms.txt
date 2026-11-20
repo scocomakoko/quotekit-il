@@ -6,7 +6,7 @@ Facts:
 - It produces a quote/worksheet, NOT a tax invoice (חשבונית מס). Not legal or tax advice.
 - Runs entirely in the browser; no sign-up; typed data is not sent to any server.
 - VAT rate is editable (default 18% as of 2026-11-20); check current rules with an accountant or the Tax Authority.
-- A CSV template (opens in Excel/Google Sheets) is a free download; an optional tip via PayPal exists (Hebrew UI: 4 ILS, English UI: $1).
+- A CSV template (opens in Excel/Google Sheets) is a free download; an optional tip via PayPal is offered after print/download and next to the template (Hebrew UI: 4 ILS, English UI: $1).
 
 Pages:
 - [Calculator and template](https://scocomakoko.github.io/quotekit-il/): main tool
