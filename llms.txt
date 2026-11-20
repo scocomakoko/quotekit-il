@@ -1,15 +1,17 @@
 # QuoteKit IL
 
-> A free, browser-based quote (price offer) worksheet for Israeli freelancers, in Hebrew and English. It calculates subtotal, VAT and total and prints to PDF.
+> Free, browser-based Hebrew tools: a quote (price offer) calculator with VAT for Israeli freelancers, printable apartment-handover checklists, and short guides. No sign-up; typed data stays in the browser.
 
 Facts:
-- It produces a quote/worksheet, NOT a tax invoice (חשבונית מס). Not legal or tax advice.
-- Runs entirely in the browser; no sign-up; typed data is not sent to any server.
-- VAT rate is editable (default 18% as of 2026-11-20); check current rules with an accountant or the Tax Authority.
-- A CSV template (opens in Excel/Google Sheets) is a free download; an optional tip via PayPal is offered after print/download and next to the template (Hebrew UI: 4 ILS, English UI: $1).
+- The quote tool produces a quote/worksheet, NOT a tax invoice (חשבונית מס). Not legal, engineering or tax advice.
+- VAT is a fixed 18% for licensed dealers; exempt dealers get 0.
+- The calculator has a Hebrew/English toggle (Hebrew shows only ILS, English only USD). A CSV template (opens in Excel/Google Sheets) is a free download.
+- An optional tip via PayPal is offered after print/download and next to the template (Hebrew UI: 4 ILS, English UI: 1 USD).
 
 Pages:
-- [Calculator and template](https://scocomakoko.github.io/quotekit-il/): main tool
-- [How to write a quote for a client](https://scocomakoko.github.io/quotekit-il/how-to-write-a-quote.html): Hebrew guide for freelancers
+- [Home: all tools](https://scocomakoko.github.io/quotekit-il/): hub listing every tool and guide
+- [Quote and VAT calculator](https://scocomakoko.github.io/quotekit-il/quote/): main tool, plus CSV template
+- [Apartment checklists](https://scocomakoko.github.io/quotekit-il/dira/): handover, walkthrough, wet rooms, rental condition form, defect list (Hebrew, printable)
+- [How to write a quote for a client](https://scocomakoko.github.io/quotekit-il/how-to-write-a-quote.html): Hebrew guide
 - [VAT on a quote: licensed vs exempt dealer](https://scocomakoko.github.io/quotekit-il/how-to-calculate-vat-on-a-quote.html): Hebrew explainer
 - [What a quote should include](https://scocomakoko.github.io/quotekit-il/what-a-quote-must-include.html): Hebrew checklist

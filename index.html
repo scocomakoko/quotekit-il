@@ -1,62 +1,32 @@
 <!doctype html>
 <html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; form-action 'none'; base-uri 'none'"><meta name="referrer" content="no-referrer">
-<title>הצעת מחיר ומע"מ לפרילנסרים | QuoteKit IL</title>
-<meta name="description" content="תבנית הצעת מחיר עם חישוב מע&quot;מ לפרילנסרים בישראל. אפשר להדפיס ל-PDF, בעברית ובאנגלית.">
+<title>QuoteKit IL: הצעת מחיר ומע"מ, וצ'קליסטים לקבלת דירה</title>
+<meta name="description" content="כלים חינמיים בעברית: מחשבון הצעת מחיר עם מע&quot;מ לעצמאים, צ'קליסטים להדפסה לקבלת דירה, ומדריכים קצרים. בלי הרשמה.">
 <link rel="canonical" href="https://scocomakoko.github.io/quotekit-il/"><link rel="alternate" hreflang="he" href="https://scocomakoko.github.io/quotekit-il/"><link rel="alternate" hreflang="x-default" href="https://scocomakoko.github.io/quotekit-il/">
-<meta name="theme-color" content="#0b5fff">
-<meta property="og:title" content="הצעת מחיר ומע&quot;מ לפרילנסרים | QuoteKit IL">
-<meta property="og:description" content="הצעת מחיר מסודרת ללקוח, עם מע&quot;מ מחושב, בדקה.">
-<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head>
-<body><a class="skip" href="#calc" data-he="מעבר לתוכן" data-en="Skip to content">מעבר לתוכן</a>
+<meta name="theme-color" content="#0f2a5c">
+<meta property="og:title" content="QuoteKit IL: הצעת מחיר ומע&quot;מ, וצ'קליסטים לקבלת דירה"><meta property="og:description" content="כלים חינמיים בעברית: מחשבון הצעת מחיר עם מע&quot;מ, צ'קליסטים לדירה ומדריכים. בלי הרשמה.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="site.css"></head>
+<body><a class="skip" href="#tools">מעבר לתוכן</a>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html" lang="en" dir="ltr">QuoteKit IL</a><nav class="site-nav" aria-label="ניווט ראשי"><a href="index.html#tools" aria-current="page">כלים</a><a href="quote/">הצעת מחיר</a><a href="dira/">צ'קליסטים לדירה</a><a href="index.html#guides">מדריכים</a></nav></div></header>
 <main>
-<header class="top"><strong lang="en" dir="ltr">QuoteKit IL</strong><button class="alt" id="langBtn" type="button" lang="en">English</button></header>
+<section class="hero"><h1>כלים פשוטים לעצמאים ולמי שמקבל דירה</h1>
+<p class="lead">QuoteKit IL הוא אתר קטן עם כלים בעברית: מחשבון להצעת מחיר עם מע"מ, וצ'קליסטים להדפסה לקבלת דירה. הכול חינם, בלי הרשמה, ומה שמקלידים נשאר בדפדפן.</p>
+<ul class="points"><li>בלי הרשמה</li><li>עובד מהטלפון</li><li>מדפיסים ל-PDF או לנייר</li></ul>
+<p><a class="btn" href="quote/">למחשבון הצעת מחיר</a> <a class="tl" href="dira/">לצ'קליסטים לדירה</a></p></section>
 
-<section id="hero"><h1 data-he="הצעת מחיר מסודרת ללקוח, עם מע&quot;מ מחושב, בדקה" data-en="A clean client quote with VAT worked out, in one minute">הצעת מחיר מסודרת ללקוח, עם מע"מ מחושב, בדקה</h1>
-<p data-he="מוסיפים שורות, והמחשבון מחשב סכום ביניים, מע&quot;מ וסה&quot;כ. מדפיסים ל-PDF, גם מהטלפון. בלי הרשמה, והכול נשאר בדפדפן שלך." data-en="Add line items and get subtotal, VAT and total. Print to PDF, even from your phone. No sign-up; it all stays in your browser.">מוסיפים שורות, והמחשבון מחשב סכום ביניים, מע"מ וסה"כ. מדפיסים ל-PDF, גם מהטלפון. בלי הרשמה, והכול נשאר בדפדפן שלך.</p>
-<p class="cta"><a class="btn" href="#calc" data-he="למחשבון" data-en="Try the calculator">למחשבון</a> <a class="tl" href="#template" data-he="או הורדת תבנית לאקסל, חינם" data-en="or download the free Excel template">או הורדת תבנית לאקסל, חינם</a></p>
-<div class="prev" aria-hidden="true"><p class="pt"><b data-he="דוגמה: ככה נראית הצעה מוכנה" data-en="Example: a finished quote">דוגמה: ככה נראית הצעה מוכנה</b></p>
-<p><span data-he="עיצוב לוגו" data-en="Logo design">עיצוב לוגו</span><bdi dir="ltr" data-he="₪1,500.00" data-en="1,500.00">₪1,500.00</bdi></p>
-<p><span data-he="שעות ייעוץ (4 × 250)" data-en="Consulting hours (4 x 250)">שעות ייעוץ (4 × 250)</span><bdi dir="ltr" data-he="₪1,000.00" data-en="1,000.00">₪1,000.00</bdi></p>
-<p class="pl"><span data-he="סכום ביניים" data-en="Subtotal">סכום ביניים</span><bdi dir="ltr" data-he="₪2,500.00" data-en="2,500.00">₪2,500.00</bdi></p>
-<p><span data-he="מע&quot;מ (18%)" data-en="VAT (18%)">מע"מ (18%)</span><bdi dir="ltr" data-he="₪450.00" data-en="450.00">₪450.00</bdi></p>
-<p class="pg"><span data-he="סה&quot;כ לתשלום" data-en="Total due">סה"כ לתשלום</span><bdi dir="ltr" data-he="₪2,950.00" data-en="2,950.00">₪2,950.00</bdi></p></div>
-<noscript><p class="warn">המחשבון צריך JavaScript. את התבנית אפשר להוריד גם בלעדיו: <a href="quote-template.csv" download>תבנית לאקסל (CSV)</a></p></noscript></section>
+<section id="tools"><h2>הצעת מחיר ומע"מ</h2>
+<div class="cards one"><a class="main" href="quote/"><b>מחשבון הצעת מחיר</b>מוסיפים שורות, ומקבלים סכום ביניים, מע"מ 18% וסה"כ. מדפיסים ל-PDF, גם מהטלפון. יש גם תבנית CSV לאקסל להורדה.</a></div></section>
 
-<section id="calc" tabindex="-1"><h2 data-he="מחשבון חינמי" data-en="Free calculator">מחשבון חינמי</h2>
-<p class="hint" data-he="מילאנו דוגמה. מחליפים בפרטים שלך ומדפיסים ל-PDF. הסכומים בשקלים." data-en="A sample is filled in. Replace it with your own lines, then print to PDF. Works with any currency; VAT is applied as a percentage.">מילאנו דוגמה. מחליפים בפרטים שלך ומדפיסים ל-PDF. הסכומים בשקלים.</p>
-<label><span data-he="סוג עוסק" data-en="Business type">סוג עוסק</span>
-<select id="dealer"><option value="licensed" data-he="עוסק מורשה (עם מע&quot;מ)" data-en="Licensed dealer (with VAT)">עוסק מורשה (עם מע"מ)</option><option value="exempt" data-he="עוסק פטור (ללא מע&quot;מ)" data-en="Exempt dealer (no VAT)">עוסק פטור (ללא מע"מ)</option></select></label>
-<label><span data-he="שיעור מע&quot;מ (%)" data-en="VAT rate (%)">שיעור מע"מ (%)</span>
-<input id="vat" type="number" inputmode="decimal" dir="ltr" step="0.1" min="0" value="18"></label>
-<p class="hint" id="vatHint"></p>
-<div id="items"></div>
-<div class="actions"><button type="button" class="alt" id="addRow" data-he="+ הוספת שורה" data-en="+ Add line">+ הוספת שורה</button> <button type="button" class="alt" id="clearBtn" data-he="ניקוי הדוגמה" data-en="Clear sample">ניקוי הדוגמה</button></div>
-<div class="tot" role="status" aria-live="off" aria-atomic="true">
-<p><span data-he="סכום ביניים" data-en="Subtotal">סכום ביניים</span><b dir="ltr" id="sub">0.00</b></p>
-<p><span id="vatLbl" data-he="מע&quot;מ" data-en="VAT">מע"מ</span><b dir="ltr" id="vatAmt">0.00</b></p>
-<p class="grand"><span data-he="סה&quot;כ לתשלום" data-en="Total due">סה"כ לתשלום</span><b dir="ltr" id="total">0.00</b></p></div>
-<div class="cta2"><p data-he="יצא טוב? יש גם תבנית לאקסל, להורדה חינם." data-en="Worked for you? There is also a free Excel template.">יצא טוב? יש גם תבנית לאקסל, להורדה חינם.</p><a class="btn ghost" href="#template" data-he="לתבנית" data-en="To the template">לתבנית</a></div>
-<h3 data-he="פרטים להדפסה" data-en="Details for print">פרטים להדפסה</h3>
-<label><span data-he="שם העסק" data-en="Business name">שם העסק</span><input id="biz" autocomplete="organization"></label>
-<label><span data-he="מספר עוסק" data-en="Business ID">מספר עוסק</span><input id="bizId" inputmode="numeric" dir="ltr"></label>
-<label><span data-he="שם הלקוח" data-en="Client name">שם הלקוח</span><input id="client"></label>
-<label><span data-he="תוקף ההצעה (ימים)" data-en="Quote valid for (days)">תוקף ההצעה (ימים)</span><input id="validity" type="number" inputmode="numeric" dir="ltr" min="0" value="30"></label>
-<label><span data-he="תנאי תשלום" data-en="Payment terms">תנאי תשלום</span><input id="terms" value="שוטף + 30"></label>
-<button type="button" id="printBtn" data-he="הדפסה או שמירה כ-PDF" data-en="Print or save as PDF">הדפסה או שמירה כ-PDF</button>
-<div id="postAsk" class="ask" hidden><p data-he="מוכן. אם זה חסך לך זמן, אפשר לפרגן ב-₪4. לא חובה." data-en="Done. If this saved you time, you can chip in $1. Totally optional.">מוכן. אם זה חסך לך זמן, אפשר לפרגן ב-₪4. לא חובה.</p><a class="btn" id="payBtn2" href="https://paypal.me/QuoteKitIL/4ILS" target="_blank" rel="noopener noreferrer">לפרגן ב-<bdi dir="ltr">₪4</bdi> (PayPal)</a></div>
-<p class="note" data-he="זו הצעת מחיר, לא חשבונית מס ולא ייעוץ משפטי או מיסויי." data-en="This is a quote, not a tax invoice (חשבונית מס), and not legal or tax advice.">זו הצעת מחיר, לא חשבונית מס ולא ייעוץ משפטי או מיסויי.</p></section>
+<section id="dira"><h2>צ'קליסטים לדירה</h2>
+<p class="hint">חמש רשימות להדפסה. מסמנים בטלפון, ומה שסימנת נשמר רק בדפדפן שלך.</p>
+<div class="cards"><a href="dira/"><b>רשימת מסירה</b>מפתחות, מונים, מסמכים ושטחים משותפים, ביום שמקבלים את הדירה.</a><a href="dira/walkthrough.html"><b>סיור בדירה לפני המסירה</b>סיור אחד, חדר אחרי חדר. מסמנים מה בסדר ורושמים מה לא.</a><a href="dira/wet-rooms.html"><b>חדרים רטובים ומרפסת</b>חדר רחצה, מטבח ומרפסת: נזילות, ניקוז, איטום ושיפועים.</a><a href="dira/rental-condition.html"><b>טופס מצב דירה</b>מתעד איך הדירה נראית בכניסה וביציאה משכירות. שני עותקים.</a><a href="dira/defect-list.html"><b>רשימת ליקויים להדפסה</b>טבלה אחת מסודרת עם שורות חתימה, אפשר למסור ביד או לשלוח.</a></div></section>
 
-<section id="template"><h2 data-he="תבנית להורדה" data-en="Downloadable template">תבנית להורדה</h2>
-<ul class="list"><li data-he="קובץ CSV שנפתח באקסל, ב-Google Sheets וב-Numbers" data-en="CSV file that opens in Excel, Google Sheets and Numbers">קובץ CSV שנפתח באקסל, ב-Google Sheets וב-Numbers</li><li data-he="נוסחאות מוכנות: סכום ביניים, מע&quot;מ וסה&quot;כ מתעדכנים לבד" data-en="Live formulas: subtotal, VAT and total update on their own">נוסחאות מוכנות: סכום ביניים, מע"מ וסה"כ מתעדכנים לבד</li><li data-he="מקום לפרטי העסק והלקוח, בעברית" data-en="Fields for business and client details">מקום לפרטי העסק והלקוח, בעברית</li></ul>
-<p><span data-he="התבנית חינם. אם היא חסכה לך זמן, אפשר לפרגן ב-" data-en="The template is free. If it saved you some time, you can chip in ">התבנית חינם. אם היא חסכה לך זמן, אפשר לפרגן ב-</span><bdi dir="ltr" data-he="₪4" data-en="$1">₪4</bdi><span data-he=" דרך PayPal. לא חובה." data-en=" via PayPal. Totally optional."> דרך PayPal. לא חובה.</span></p>
-<a class="btn" id="payBtn" href="https://paypal.me/QuoteKitIL/4ILS" target="_blank" rel="noopener noreferrer">לפרגן ב-<bdi dir="ltr">₪4</bdi> (PayPal)</a>
-<p class="hint" data-he="PayPal נפתח בלשונית חדשה, ואת פרטי הכרטיס רק PayPal רואה. בבקשה לבחור &quot;סחורות ושירותים&quot;." data-en="PayPal opens in a new tab, and only PayPal sees your card details. Please choose &quot;Goods &amp; Services&quot;.">PayPal נפתח בלשונית חדשה, ואת פרטי הכרטיס רק PayPal רואה. בבקשה לבחור "סחורות ושירותים".</p>
-<a class="btn ghost" id="dlLink" href="quote-template.csv" download data-he="הורדת התבנית לאקסל (CSV)" data-en="Download template for Excel (CSV)">הורדת התבנית לאקסל (CSV)</a></section>
+<section id="guides"><h2>מדריכים</h2>
+<div class="cards"><a href="how-to-write-a-quote.html"><b>איך כותבים הצעת מחיר ללקוח</b>שישה צעדים קצרים, ממה שהלקוח ביקש ועד תנאי תשלום.</a><a href="how-to-calculate-vat-on-a-quote.html"><b>איך מחשבים מע"מ על הצעת מחיר</b>עוסק מורשה מול עוסק פטור, עם דוגמה מחושבת.</a><a href="what-a-quote-must-include.html"><b>מה כוללים בהצעת מחיר</b>רשימת בדיקה לפני ששולחים ללקוח.</a></div></section>
 
-<section id="trust"><h2 data-he="פרטיות" data-en="Privacy">פרטיות</h2>
-<p data-he="אין הרשמה. מה שמקלידים כאן נשאר בדפדפן ולא נשלח לשום שרת. אם בא לך לפרגן, זה רק דרך PayPal." data-en="No sign-up. What you type here stays in your browser and is not sent to any server. If you want to chip in, it is through PayPal only.">אין הרשמה. מה שמקלידים כאן נשאר בדפדפן ולא נשלח לשום שרת. אם בא לך לפרגן, זה רק דרך PayPal.</p></section>
-
-<section id="quote"><h2 id="qTitle" data-he="הצעת מחיר" data-en="Quote">הצעת מחיר</h2><dl id="qMeta"></dl><table id="qTable"></table>
-<table id="qTot"></table><p id="qVat"></p><p data-he="זו הצעת מחיר, לא חשבונית מס. המחירים לפני מע&quot;מ, אלא אם כתוב אחרת." data-en="Quote only, not a tax invoice. Prices exclude VAT unless stated otherwise.">זו הצעת מחיר, לא חשבונית מס. המחירים לפני מע"מ, אלא אם כתוב אחרת.</p></section>
-<footer><small data-he="QuoteKit IL. כלי עזר, לא ייעוץ מס." data-en="QuoteKit IL. A utility only, not tax advice.">QuoteKit IL. כלי עזר, לא ייעוץ מס.</small><nav class="nav"><a href="#calc">למחשבון</a> | <a href="how-to-write-a-quote.html">איך כותבים הצעת מחיר</a> | <a href="how-to-calculate-vat-on-a-quote.html">מע"מ בהצעת מחיר</a> | <a href="what-a-quote-must-include.html">מה כדאי לכלול בהצעת מחיר</a> | <a href="dira/">צ'קליסטים להדפסה לקבלת דירה</a></nav></footer>
-</main><script src="app.js"></script></body></html>
+<section><h2>לפני שמתחילים</h2>
+<p>הכלים חינם. אם אחד מהם חסך לך זמן, בדף המחשבון יש כפתור לפרגן ב-₪4 דרך PayPal. לא חובה.</p>
+<p class="note">הצעת מחיר היא לא חשבונית מס, והצ'קליסטים הם לא ייעוץ משפטי או הנדסי. לשאלה על המקרה שלך כדאי לפנות לאיש מקצוע.</p></section>
+</main>
+<footer class="site-footer"><div class="wrap"><p><a class="brand" href="index.html" lang="en" dir="ltr">QuoteKit IL</a></p><p>כלים חינמיים בעברית, שרצים בדפדפן. בלי הרשמה, ובלי לשלוח את מה שמקלידים לשרת.</p><nav class="fl" aria-label="קישורים בתחתית העמוד"><a href="quote/">מחשבון הצעת מחיר</a><a href="dira/">צ'קליסטים לדירה</a><a href="how-to-write-a-quote.html">איך כותבים הצעת מחיר</a><a href="how-to-calculate-vat-on-a-quote.html">מע"מ בהצעת מחיר</a><a href="what-a-quote-must-include.html">מה כוללים בהצעת מחיר</a></nav><p>כלי עזר כללי בלבד. זה לא ייעוץ משפטי, הנדסי או מיסויי.</p></div></footer>
+</body></html>
