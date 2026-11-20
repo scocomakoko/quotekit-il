@@ -1,13 +1,13 @@
 (function(){
-var CFG={provider:"paypal.me",url:"https://paypal.me/QuoteKitIL/1USD",amount:1,currency:"USD",
-label:{he:"תמיכה ב-$1 דרך PayPal",en:"Support with $1 via PayPal"},telemetryEndpoint:"",vatRateDefault:18,vatRateAsOf:"2025-01"};
+var PAY={he:{url:"https://paypal.me/QuoteKitIL/4ILS",amount:4,currency:"ILS",pre:"להשאיר ",price:"₪4",post:" ב-PayPal"},en:{url:"https://paypal.me/QuoteKitIL/1USD",amount:1,currency:"USD",pre:"Leave ",price:"$1",post:" on PayPal"}};
+var CFG={provider:"paypal.me",telemetryEndpoint:"",vatRateDefault:18,vatRateAsOf:"2026-11-20"};
 var T={
  he:{title:"הצעת מחיר ומע\"מ לפרילנסרים | QuoteKit IL",desc:"תיאור",qty:"כמות",price:"מחיר ליחידה (לפני מע\"מ)",lt:"סה\"כ שורה",rm:"הסרת שורה",
   sub:"סכום ביניים",vat:"מע\"מ",total:"סה\"כ לתשלום",biz:"שם העסק",bizId:"מספר עוסק",client:"שם הלקוח",date:"תאריך",valid:"תוקף ההצעה",days:"ימים",terms:"תנאי תשלום",
-  exempt:"עוסק פטור - ללא מע\"מ",asOf:"נכון ל",check:", בדקו אם השתנה",sample:["עיצוב לוגו","שעות ייעוץ"],loc:"he-IL"},
+  exempt:"עוסק פטור - ללא מע\"מ",asOf:"נכון ל-",check:". כדאי לבדוק אם השתנה.",sample:["עיצוב לוגו","שעות ייעוץ"],loc:"he-IL"},
  en:{title:"Quote and VAT for freelancers | QuoteKit IL",desc:"Description",qty:"Qty",price:"Unit price (ex-VAT)",lt:"Line total",rm:"Remove line",
   sub:"Subtotal",vat:"VAT",total:"Total due",biz:"Business name",bizId:"Business ID",client:"Client",date:"Date",valid:"Valid for",days:"days",terms:"Payment terms",
-  exempt:"Exempt dealer - no VAT",asOf:"As of ",check:", check if changed",sample:["Logo design","Consulting hours"],loc:"en-US"}};
+  exempt:"Exempt dealer - no VAT",asOf:"As of ",check:". Worth checking if it changed.",sample:["Logo design","Consulting hours"],loc:"en-US"}};
 var lang="he",$=function(i){return document.getElementById(i)},used=false,sampleOn=true;
 function round2(x){return Math.round((x+Number.EPSILON)*100)/100}
 // Pure calculation: lines [{q,p}], vat percent, exempt flag.
@@ -18,13 +18,15 @@ function log(ev,d){var e={event:ev,t:new Date().toISOString(),lang:lang,data:d||
  try{var a=JSON.parse(localStorage.getItem("qk_events")||"[]");a.push(e);localStorage.setItem("qk_events",JSON.stringify(a.slice(-200)))}catch(x){}
  console.log("[event]",e);
  if(CFG.telemetryEndpoint&&navigator.sendBeacon){try{navigator.sendBeacon(CFG.telemetryEndpoint,JSON.stringify(e))}catch(x){}}}
-function asOfText(){var m=/^(\d{4})-(\d{2})/.exec(CFG.vatRateAsOf),t=T[lang];
- if(!m)return"";var d=new Date(+m[1],+m[2]-1,1);return t.asOf+d.toLocaleDateString(t.loc,{month:"long",year:"numeric"})+t.check}
+function asOfText(){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(CFG.vatRateAsOf),t=T[lang];
+ if(!m)return"";var d=new Date(+m[1],+m[2]-1,+m[3]);if(isNaN(d.getTime())||d.getMonth()!==+m[2]-1||d.getDate()!==+m[3])return"";
+ var ds=lang==="he"?m[3]+"."+m[2]+"."+m[1]:d.toLocaleDateString(t.loc,{day:"numeric",month:"long",year:"numeric"});
+ return t.asOf+ds+": "+(+CFG.vatRateDefault)+"%"+t.check}
 function exempt(){return $("dealer").value==="exempt"}
 function applyLang(){var t=T[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==="he"?"rtl":"ltr";document.title=t.title;
  document.querySelectorAll("[data-he]").forEach(function(el){el.textContent=el.getAttribute("data-"+lang)});
  $("langBtn").textContent=lang==="he"?"English":"עברית";$("langBtn").lang=lang==="he"?"en":"he";
- $("payBtn").textContent=CFG.label[lang]||CFG.label.en;$("vatHint").textContent=asOfText();
+ var pp=PAY[lang],pb=$("payBtn"),bd=document.createElement("bdi");bd.dir="ltr";bd.textContent=pp.price;pb.textContent=pp.pre;pb.appendChild(bd);pb.appendChild(document.createTextNode(pp.post));pb.href=pp.url;$("vatHint").textContent=asOfText();
  Array.prototype.forEach.call($("items").children,labelRow);calc()}
 function field(cls,key,type,val,mode){var l=document.createElement("label");l.className=cls;var s=document.createElement("span");s.className="sm";s.setAttribute("data-k",key);l.appendChild(s);
  var n=document.createElement("input");n.type=type;n.value=val;if(mode){n.setAttribute("inputmode",mode);n.dir="ltr";n.min="0";n.step="any"}n.addEventListener("input",function(){sampleOn=false;calc()});l.appendChild(n);return l}
@@ -64,10 +66,10 @@ function init(){try{var sv=localStorage.getItem("qk_lang");if(sv==="en"||sv==="h
  $("clearBtn").onclick=function(){$("items").textContent="";row("","1","0");sampleOn=false};
  $("vat").oninput=calc;$("dealer").onchange=function(){log("dealer_change",$("dealer").value);calc()};
  $("printBtn").onclick=function(){log("print_click");render();window.print()};
- $("payBtn").href=CFG.url;$("payBtn").onclick=function(){log("pay_click",{provider:CFG.provider,amount:CFG.amount,currency:CFG.currency})};
+ $("payBtn").onclick=function(){var p=PAY[lang];log("pay_click",{provider:CFG.provider,lang:lang,url:p.url,amount:p.amount,currency:p.currency})};
  $("dlLink").onclick=function(){log("download_click")};
  $("vat").value=CFG.vatRateDefault;applyLang();log("page_view")}
 if(typeof document==="undefined"){module.exports={totals:totals,round2:round2};return}
 if(location.protocol==="file:"){init()}else{
- fetch("payment.config.json").then(function(r){return r.json()}).then(function(c){if(!c||typeof c!=="object")return;if(c.url==="https://paypal.me/QuoteKitIL/1USD")CFG.url=c.url;if(typeof c.telemetryEndpoint==="string"&&c.telemetryEndpoint){try{var u=new URL(c.telemetryEndpoint,location.href);if(u.protocol==="https:"&&u.origin===location.origin)CFG.telemetryEndpoint=u.href}catch(e){}}if(typeof c.vatRateDefault==="number"&&isFinite(c.vatRateDefault))CFG.vatRateDefault=c.vatRateDefault;if(typeof c.vatRateAsOf==="string")CFG.vatRateAsOf=c.vatRateAsOf.slice(0,20)}).catch(function(){}).then(init)}
+ fetch("payment.config.json").then(function(r){return r.json()}).then(function(c){if(!c||typeof c!=="object")return;if(c.he&&c.he.url==="https://paypal.me/QuoteKitIL/4ILS")PAY.he.url=c.he.url;if(c.en&&c.en.url==="https://paypal.me/QuoteKitIL/1USD")PAY.en.url=c.en.url;if(typeof c.telemetryEndpoint==="string"&&c.telemetryEndpoint){try{var u=new URL(c.telemetryEndpoint,location.href);if(u.protocol==="https:"&&u.origin===location.origin)CFG.telemetryEndpoint=u.href}catch(e){}}if(typeof c.vatRateDefault==="number"&&isFinite(c.vatRateDefault))CFG.vatRateDefault=c.vatRateDefault;if(typeof c.vatRateAsOf==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(c.vatRateAsOf))CFG.vatRateAsOf=c.vatRateAsOf}).catch(function(){}).then(init)}
 })();

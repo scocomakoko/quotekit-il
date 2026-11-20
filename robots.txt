@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scocomakoko.github.io/quotekit-il/sitemap.xml

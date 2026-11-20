@@ -1,0 +1,15 @@
+# QuoteKit IL
+
+> A free, browser-based quote (price offer) worksheet for Israeli freelancers, in Hebrew and English. It calculates subtotal, VAT and total and prints to PDF.
+
+Facts:
+- It produces a quote/worksheet, NOT a tax invoice (חשבונית מס). Not legal or tax advice.
+- Runs entirely in the browser; no sign-up; typed data is not sent to any server.
+- VAT rate is editable (default 18% as of 2026-11-20); check current rules with an accountant or the Tax Authority.
+- A CSV template (opens in Excel/Google Sheets) is a free download; an optional tip via PayPal exists (Hebrew UI: 4 ILS, English UI: $1).
+
+Pages:
+- [Calculator and template](https://scocomakoko.github.io/quotekit-il/): main tool
+- [How to write a quote for a client](https://scocomakoko.github.io/quotekit-il/how-to-write-a-quote.html): Hebrew guide for freelancers
+- [VAT on a quote: licensed vs exempt dealer](https://scocomakoko.github.io/quotekit-il/how-to-calculate-vat-on-a-quote.html): Hebrew explainer
+- [What a quote should include](https://scocomakoko.github.io/quotekit-il/what-a-quote-must-include.html): Hebrew checklist

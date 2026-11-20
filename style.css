@@ -29,3 +29,5 @@ footer{text-align:center;color:#555;margin:16px 0}
 @media(max-width:480px){button,.btn{width:100%}.top button{width:auto}.row .rm{width:auto}}
 @page{size:A4;margin:16mm}
 @media print{body{background:#fff}.skip,header,main>*:not(#quote){display:none!important}#quote{display:block!important}section{box-shadow:none;padding:0}}
+
+.nav{margin-top:6px;font-size:.9rem}.nav a{color:#0b5fff;display:inline-block;padding:10px 4px}section p a:not(.btn){color:#0b5fff}

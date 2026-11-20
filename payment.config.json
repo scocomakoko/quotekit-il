@@ -1,10 +1,8 @@
 {
   "provider": "paypal.me",
-  "url": "https://paypal.me/QuoteKitIL/1USD",
-  "amount": 1,
-  "currency": "USD",
-  "label": { "he": "שלמו מה שהוגן, $1 מומלץ", "en": "Pay what's fair, $1 suggested" },
+  "he": { "url": "https://paypal.me/QuoteKitIL/4ILS", "amount": 4, "currency": "ILS" },
+  "en": { "url": "https://paypal.me/QuoteKitIL/1USD", "amount": 1, "currency": "USD" },
   "telemetryEndpoint": "",
   "vatRateDefault": 18,
-  "vatRateAsOf": "2025-01"
+  "vatRateAsOf": "2026-11-20"
 }
