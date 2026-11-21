@@ -91,8 +91,22 @@ th,td{border:1px solid var(--bd);padding:8px 10px;text-align:start}
 th{background:var(--soft)}
 .related{margin-top:22px}
 .related .list a{font-weight:600}
-.crumbs{margin:0 0 6px;font-size:.88rem}
-.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 6px;color:var(--tx2)}
-.crumbs li+li::before{content:"\203A";margin-inline-end:6px}
-.crumbs a{display:inline-block;padding:10px 2px}
+.crumbs{margin:0 0 14px;font-size:.88rem;max-width:100%}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:nowrap;align-items:center;min-width:0}
+.crumbs li{display:flex;align-items:center;flex:none;color:var(--tx2)}
+.crumbs li+li::before{content:"";flex:none;display:inline-block;width:6px;height:6px;margin:0 8px;border-left:2px solid var(--tx2);border-bottom:2px solid var(--tx2);transform:rotate(45deg);opacity:.65;vertical-align:middle}
+html[dir=ltr] .crumbs li+li::before{transform:rotate(-135deg)}
+.crumbs a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid var(--bd);border-radius:999px;background:var(--card);color:var(--tx2);text-decoration:none;white-space:nowrap;box-shadow:var(--sh);transition:background .15s,border-color .15s,color .15s}
+.crumbs a:hover{background:var(--soft);border-color:var(--pri);color:var(--link)}
+.crumbs li[aria-current]{display:block;flex:0 1 auto;min-width:0;padding:6px 0;font-weight:700;color:var(--tx);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.crumbs li[aria-current]::before{margin-top:-2px}
+@media(max-width:480px){.crumbs a{padding:0 11px}.crumbs li+li::before{margin:0 5px}}
 @media print{.crumbs{display:none}}
+.who{display:inline-block;margin:0 0 8px;padding:3px 12px;border-radius:999px;background:var(--soft);border:1px solid var(--soft-bd);color:var(--tx);font-size:.85rem;font-weight:600}
+.tool h2{margin-top:.2em;font-size:1.3rem}
+.tool .purpose{font-size:1.02rem;color:var(--tx);margin:.2em 0 .6em}
+.tool .btn{margin-top:6px}
+.tool.calc{border-top:4px solid var(--pri)}
+.tool.apt{border-top:4px solid var(--acc)}
+.sub{font-size:1rem;margin:1.1em 0 .5em;color:var(--hd)}
+.cards.mini{grid-template-columns:repeat(auto-fit,minmax(13rem,1fr))}
