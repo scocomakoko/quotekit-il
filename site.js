@@ -64,7 +64,7 @@
       if (box) {
         box.hidden = false;
         box.value = text;
-        try { box.focus(); box.select(); } catch (e) {}
+        try { box.focus(); box.select(); box.setSelectionRange(0, text.length); } catch (e) {}
       }
       var ok = false;
       try { ok = !!(d.execCommand && box && d.execCommand('copy')); } catch (e) {}
