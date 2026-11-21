@@ -18,6 +18,7 @@ Pages:
 - [Quote vs invoice](https://scocomakoko.github.io/quotekit-il/quote-vs-invoice.html): Hebrew guide, what each document is and when to issue it
 - [Renovation quote, worked example](https://scocomakoko.github.io/quotekit-il/renovation-quote-example.html): Hebrew guide, line-by-line example with 18% VAT
 - [Reverse VAT calculation](https://scocomakoko.github.io/quotekit-il/reverse-vat-calculation.html): Hebrew guide, finding the pre-VAT amount from a VAT-inclusive price (divide by 1.18)
+- [Quote for exempt vs licensed dealer](https://scocomakoko.github.io/quotekit-il/quote-exempt-vs-licensed-dealer.html): Hebrew guide, what to write and when 18% VAT is added for each dealer type
 
 More features (all client-side, localStorage only):
 - Quote tool: live preview, copy as WhatsApp message or open wa.me link on tap, automatic quote number, customizable quick-add lines, optional remembered business details.
