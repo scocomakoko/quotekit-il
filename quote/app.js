@@ -1,7 +1,7 @@
 (function(){
 // VAT rate fixed by law. Change here only if the law changes.
 var VAT_RATE=18;
-var PAY={he:{url:"https://paypal.me/QuoteKitIL/4ILS",amount:4,currency:"ILS",pre:"לפרגן ב-",price:"₪4",post:" (PayPal)"},en:{url:"https://paypal.me/QuoteKitIL/1USD",amount:1,currency:"USD",pre:"Chip in ",price:"$1",post:" via PayPal"}};
+var PAY={he:{url:"https://paypal.me/QuoteKitIL/1ILS",amount:1,currency:"ILS",pre:"לפרגן בשקל (",price:"₪1",post:") דרך PayPal"},en:{url:"https://paypal.me/QuoteKitIL/1USD",amount:1,currency:"USD",pre:"Chip in ",price:"$1",post:" via PayPal"}};
 var CFG={provider:"paypal.me",telemetryEndpoint:""};
 var T={
  he:{title:"הצעת מחיר ומע\"מ לפרילנסרים | QuoteKit IL",desc:"תיאור",qty:"כמות",price:"מחיר ליחידה",pricePrint:"מחיר ליחידה (לפני מע\"מ)",lt:"סה\"כ שורה",rm:"הסרת שורה",
@@ -164,5 +164,5 @@ function init(){try{var sv=localStorage.getItem("qk_lang");if(sv==="en"||sv==="h
  applyLang();log("page_view")}
 if(typeof document==="undefined"){module.exports={totals:totals,round2:round2,VAT_RATE:VAT_RATE};return}
 if(location.protocol==="file:"){init()}else{
- fetch("payment.config.json").then(function(r){return r.json()}).then(function(c){if(!c||typeof c!=="object")return;if(c.he&&c.he.url==="https://paypal.me/QuoteKitIL/4ILS")PAY.he.url=c.he.url;if(c.en&&c.en.url==="https://paypal.me/QuoteKitIL/1USD")PAY.en.url=c.en.url;if(typeof c.telemetryEndpoint==="string"&&c.telemetryEndpoint){try{var u=new URL(c.telemetryEndpoint,location.href);if(u.protocol==="https:"&&u.origin===location.origin)CFG.telemetryEndpoint=u.href}catch(e){}}}).catch(function(){}).then(init)}
+ fetch("payment.config.json").then(function(r){return r.json()}).then(function(c){if(!c||typeof c!=="object")return;if(c.he&&c.he.url==="https://paypal.me/QuoteKitIL/1ILS")PAY.he.url=c.he.url;if(c.en&&c.en.url==="https://paypal.me/QuoteKitIL/1USD")PAY.en.url=c.en.url;if(typeof c.telemetryEndpoint==="string"&&c.telemetryEndpoint){try{var u=new URL(c.telemetryEndpoint,location.href);if(u.protocol==="https:"&&u.origin===location.origin)CFG.telemetryEndpoint=u.href}catch(e){}}}).catch(function(){}).then(init)}
 })();

@@ -6,7 +6,7 @@ Facts:
 - The quote tool produces a quote/worksheet, NOT a tax invoice (חשבונית מס). Not legal, engineering or tax advice.
 - VAT is a fixed 18% for licensed dealers; exempt dealers get 0.
 - The calculator has a Hebrew/English toggle (Hebrew shows only ILS, English only USD). A CSV template (opens in Excel/Google Sheets) is a free download.
-- An optional tip via PayPal is offered after print/download and next to the template (Hebrew UI: 4 ILS, English UI: 1 USD).
+- An optional tip via PayPal is offered after print/download and next to the template (Hebrew UI: 1 ILS, English UI: 1 USD).
 
 Pages:
 - [Home: all tools](https://scocomakoko.github.io/quotekit-il/): hub listing every tool and guide

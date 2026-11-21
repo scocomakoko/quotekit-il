@@ -1,8 +1,8 @@
 {
   "provider": "paypal.me",
   "he": {
-    "url": "https://paypal.me/QuoteKitIL/4ILS",
-    "amount": 4,
+    "url": "https://paypal.me/QuoteKitIL/1ILS",
+    "amount": 1,
     "currency": "ILS"
   },
   "en": {
