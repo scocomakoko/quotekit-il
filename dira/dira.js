@@ -304,13 +304,15 @@
   }
 
   function clearAll() {
-    if (!window.confirm('לנקות את כל מה שמילאת בדף הזה?')) { return; }
-    store(function (s) {
-      var del = ['dira-defects:' + NAME];
-      for (var i = 0; i < s.length; i++) { var k = s.key(i); if (k && k.indexOf(P) === 0) { del.push(k); } }
-      del.forEach(function (k) { s.removeItem(k); });
+    if (!window.QK || !window.QK.ask) { return; }
+    window.QK.ask('לנקות את כל מה שמילאת בדף הזה?', 'כן, לנקות', 'ביטול', function () {
+      store(function (s) {
+        var del = ['dira-defects:' + NAME];
+        for (var i = 0; i < s.length; i++) { var k = s.key(i); if (k && k.indexOf(P) === 0) { del.push(k); } }
+        del.forEach(function (k) { s.removeItem(k); });
+      });
+      location.reload();
     });
-    location.reload();
   }
 
   function makeCopy() {

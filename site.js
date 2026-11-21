@@ -79,6 +79,43 @@
     } catch (e) {}
     fallback();
   }
-  window.QK = { copy: copy, svg: svg };
+  // In-page confirm popup (replaces window.confirm). CSP-safe: classes only.
+  function ask(msg, yesLabel, noLabel, onYes) {
+    var prev = d.activeElement;
+    var ov = d.createElement('div');
+    ov.className = 'qk-ov';
+    var box = d.createElement('div');
+    box.className = 'qk-dlg';
+    box.setAttribute('role', 'alertdialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-labelledby', 'qk-dlg-msg');
+    var p = d.createElement('p');
+    p.id = 'qk-dlg-msg';
+    p.textContent = msg;
+    var row = d.createElement('div');
+    row.className = 'qk-act';
+    var no = d.createElement('button');
+    no.type = 'button'; no.className = 'alt'; no.textContent = noLabel;
+    var yes = d.createElement('button');
+    yes.type = 'button'; yes.textContent = yesLabel;
+    row.appendChild(yes); row.appendChild(no);
+    box.appendChild(p); box.appendChild(row); ov.appendChild(box);
+    function close() {
+      d.removeEventListener('keydown', key, true);
+      if (ov.parentNode) { ov.parentNode.removeChild(ov); }
+      try { if (prev && prev.focus) { prev.focus(); } } catch (e) {}
+    }
+    function key(e) {
+      if (e.key === 'Escape') { e.preventDefault(); close(); }
+      else if (e.key === 'Tab') { e.preventDefault(); (d.activeElement === yes ? no : yes).focus(); }
+    }
+    yes.addEventListener('click', function () { close(); onYes(); });
+    no.addEventListener('click', close);
+    ov.addEventListener('click', function (e) { if (e.target === ov) { close(); } });
+    d.addEventListener('keydown', key, true);
+    d.body.appendChild(ov);
+    no.focus();
+  }
+  window.QK = { copy: copy, svg: svg, ask: ask };
   if (d.readyState === 'loading') { d.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();
