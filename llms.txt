@@ -12,6 +12,7 @@ Pages:
 - [Home: all tools](https://scocomakoko.github.io/quotekit-il/): hub listing every tool and guide
 - [About and privacy](https://scocomakoko.github.io/quotekit-il/about/): Hebrew page on what is stored in the browser, no sign-up or tracking, limits of the tools
 - [Quote and VAT calculator](https://scocomakoko.github.io/quotekit-il/quote/): main tool, plus CSV template
+- [Payment terms calculator (shotef+30)](https://scocomakoko.github.io/quotekit-il/payment-terms/): Hebrew tool, invoice date + terms preset (shotef, +30, +45, +60, +90, custom) gives due date = end of invoice month plus N days, shown next to plain N days from invoice date; days remaining/overdue; copyable summary. Estimate only, no interest, not legal advice
 - [Apartment checklists](https://scocomakoko.github.io/quotekit-il/dira/): handover, walkthrough, wet rooms, rental condition form, defect list (Hebrew, printable)
 - [How to write a quote for a client](https://scocomakoko.github.io/quotekit-il/how-to-write-a-quote.html): Hebrew guide
 - [VAT on a quote: licensed vs exempt dealer](https://scocomakoko.github.io/quotekit-il/how-to-calculate-vat-on-a-quote.html): Hebrew explainer

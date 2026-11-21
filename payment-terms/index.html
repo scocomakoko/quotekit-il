@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self'; form-action 'none'; base-uri 'none'"><meta name="referrer" content="no-referrer">
+<title>מחשבון שוטף+30: מתי החשבונית אמורה להיות משולמת | QuoteKit IL</title>
+<meta name="description" content="מחשבון שוטף+30, +45, +60 ו-+90: מכניסים תאריך חשבונית ורואים תאריך פירעון, כמה ימים נשארו, והשוואה ל-30 יום מהחשבונית. בעברית, בלי הרשמה.">
+<link rel="canonical" href="https://scocomakoko.github.io/quotekit-il/payment-terms/"><link rel="alternate" hreflang="he" href="https://scocomakoko.github.io/quotekit-il/payment-terms/"><link rel="alternate" hreflang="x-default" href="https://scocomakoko.github.io/quotekit-il/payment-terms/">
+<meta name="theme-color" content="#0f2a5c">
+<meta property="og:type" content="article"><meta property="og:locale" content="he_IL"><meta property="og:site_name" content="QuoteKit IL"><meta property="og:url" content="https://scocomakoko.github.io/quotekit-il/payment-terms/"><meta property="og:title" content="מחשבון שוטף+30: מתי החשבונית אמורה להיות משולמת | QuoteKit IL"><meta property="og:description" content="מכניסים תאריך חשבונית ורואים תאריך פירעון לפי שוטף+30, +45, +60 או +90.">
+<meta name="robots" content="max-image-preview:large"><meta property="og:image" content="https://scocomakoko.github.io/quotekit-il/og.png"><meta property="og:image:width" content="1280"><meta property="og:image:height" content="720"><meta property="og:image:alt" content="עפרון עם הצעת מחיר ורשימה"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="../apple-touch-icon.png"><link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="payment-terms.css"><script src="../site.js" defer></script><script src="payment-terms.js" defer></script><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"מחשבון שוטף+30","inLanguage":"he","mainEntityOfPage":"https://scocomakoko.github.io/quotekit-il/payment-terms/","datePublished":"2026-11-21T12:00:00+02:00","dateModified":"2026-11-21T12:00:00+02:00","author":{"@type":"Organization","name":"QuoteKit IL","url":"https://scocomakoko.github.io/quotekit-il/"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"בית","item":"https://scocomakoko.github.io/quotekit-il/"},{"@type":"ListItem","position":2,"name":"מחשבון שוטף+30"}]}</script></head>
+<body><header class="site-header"><div class="wrap"><a class="brand" href="../index.html" lang="en" dir="ltr"><img class="logo" src="../mascot.svg" alt="" width="30" height="32"><span>QuoteKit IL</span></a><nav class="site-nav" aria-label="ניווט ראשי"><a href="../index.html#tools" aria-current="page">כלים</a><a href="../quote/">הצעת מחיר</a><a href="../dira/">צ'קליסטים לדירה</a><a href="../index.html#guides">מדריכים</a></nav></div></header>
+<main><nav class="crumbs" aria-label="פירורי לחם"><ol><li><a href="../index.html">בית</a></li><li aria-current="page">מחשבון שוטף+30</li></ol></nav>
+<section><h1>מחשבון שוטף+30</h1>
+<p>מכניסים את תאריך החשבונית, בוחרים תנאי תשלום, ורואים עד מתי הלקוח אמור לשלם. בלי הרשמה, והכול נשאר בדפדפן.</p>
+<noscript><p class="warn">המחשבון צריך JavaScript. החישוב בקצרה: סוף חודש החשבונית, ועוד מספר הימים שבתנאי.</p></noscript></section>
+
+<section id="calc" aria-labelledby="calch"><h2 id="calch">חישוב תאריך תשלום</h2>
+<div class="pt-two"><label for="pt-date"><span>תאריך החשבונית</span><input id="pt-date" type="date" dir="ltr"></label>
+<label for="pt-days"><span>מספר ימים אחר (לתנאי "אחר")</span><input id="pt-days" type="number" inputmode="numeric" dir="ltr" min="0" max="9999" placeholder="למשל 75"></label></div>
+<p class="sm">תנאי תשלום</p>
+<div class="pt-chips" id="pt-chips" role="group" aria-label="תנאי תשלום"></div>
+<p class="pt-err" id="pt-err" role="status"></p>
+<div class="pt-res" role="status" aria-live="polite">
+<div class="pt-card main"><p class="lbl" id="pt-dueLbl">שוטף+30: סוף החודש ועוד 30 ימים</p><p class="big" id="pt-due">-</p><p class="sub" id="pt-dueSub"></p></div>
+<div class="pt-card"><p class="lbl" id="pt-altLbl">לשם השוואה: 30 ימים מתאריך החשבונית (לא שוטף)</p><p class="big" id="pt-alt">-</p><p class="sub" id="pt-altSub"></p></div></div>
+<p class="sm">סיכום להעתקה</p>
+<p class="pt-sum" id="pt-sum"></p>
+<p><button type="button" id="pt-copy">העתקת הסיכום</button></p>
+<p id="pt-msg" role="status"></p><textarea id="pt-box" readonly hidden aria-label="הטקסט להעתקה"></textarea>
+<p class="tip noprint" id="pt-tip" hidden></p>
+<p class="note">זו הערכה בלבד ולא ייעוץ משפטי. מה שקובע הוא מה שכתוב בחוזה או בהזמנה שלך, ולכן כדאי לבדוק שם.</p></section>
+
+<section><h2>מה זה שוטף ואיך סופרים</h2>
+<p>"שוטף" אומר שהספירה מתחילה בסוף החודש שבו יצאה החשבונית, ולא ביום שהיא יצאה. ו"+30" אומר: ועוד 30 יום מאותה נקודה.</p>
+<p>דוגמה: שלחת חשבונית ב-15 בנובמבר 2026 בתנאי שוטף+30. סוף נובמבר הוא ה-30 בו, ועוד 30 יום מביאים ל-30 בדצמבר 2026. אם התנאי היה "30 יום מתאריך החשבונית", התאריך היה 15 בדצמבר, שבועיים קודם.</p>
+<p>מה שחשוב: חשבונית ב-1 בחודש וחשבונית ב-30 בחודש מקבלות אותו תאריך תשלום. לכן שולחים חשבונית בתחילת החודש, ולא ממתינים לסופו.</p></section>
+
+<section><h2>טעויות שקורות הרבה</h2>
+<ul class="list"><li>לספור 30 יום מתאריך החשבונית ולהניח שזה שוטף+30. זה יוצא קצר בשבועיים בממוצע.</li><li>לשכוח שפברואר קצר, ושבשנה מעוברת יש בו 29 יום. המחשבון כבר מביא את זה בחשבון.</li><li>לספור מיום המסירה או מיום קבלת החשבונית. כאן נקודת המוצא היא התאריך שרשום על החשבונית.</li><li>לא לכתוב את התנאי מראש. אחר כך כל צד זוכר אחרת. אפשר לכתוב אותו כבר ב<a href="../quote/">הצעת המחיר</a>.</li></ul></section>
+
+<section class="related noprint" aria-labelledby="relh"><h2 id="relh">מדריכים קשורים</h2><ul class="list rl"><li><a href="../quote/">מחשבון הצעת מחיר ומע"מ</a></li><li><a href="../quote-vs-invoice.html">הבדל בין הצעת מחיר לחשבונית</a></li><li><a href="../how-to-write-a-quote.html">איך כותבים הצעת מחיר ללקוח</a></li></ul></section>
+</main>
+<footer class="site-footer"><div class="wrap"><p><a class="brand" href="../index.html" lang="en" dir="ltr"><img class="logo" src="../mascot.svg" alt="" width="30" height="32"><span>QuoteKit IL</span></a></p><p>כלים חינמיים בעברית, שרצים בדפדפן. בלי הרשמה, ובלי לשלוח את מה שמקלידים לשרת.</p><nav class="fl" aria-label="קישורים בתחתית העמוד"><a href="../quote/">מחשבון הצעת מחיר</a><a href="./">מחשבון שוטף+30</a><a href="../dira/">צ'קליסטים לדירה</a><a href="../how-to-write-a-quote.html">איך כותבים הצעת מחיר</a><a href="../quote-vs-invoice.html">הבדל בין הצעה לחשבונית</a><a href="../about/">על האתר ופרטיות</a></nav><p>כלי עזר כללי בלבד. זה לא ייעוץ משפטי, הנדסי או מיסויי.</p></div></footer>
+</body></html>
