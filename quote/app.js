@@ -27,7 +27,6 @@ function load(k,def){try{var v=JSON.parse(localStorage.getItem(k));return v==nul
 function save(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(x){}}
 function del(k){try{localStorage.removeItem(k)}catch(x){}}
 function log(ev,d){var e={event:ev,t:new Date().toISOString(),lang:lang,data:d||null};
- try{var a=JSON.parse(localStorage.getItem("qk_events")||"[]");a.push(e);localStorage.setItem("qk_events",JSON.stringify(a.slice(-200)))}catch(x){}
  console.log("[event]",e);
  if(CFG.telemetryEndpoint&&navigator.sendBeacon){try{navigator.sendBeacon(CFG.telemetryEndpoint,JSON.stringify(e))}catch(x){}}}
 function exempt(){return $("dealer").value==="exempt"}
