@@ -363,7 +363,7 @@
     }
     setupImport();
     var pf = d.getElementById('pfoot');
-    if (pf) { pf.textContent = SITE + ' · זו רשימה כללית בלבד, לא ייעוץ משפטי או הנדסי.'; }
+    if (pf) { var bd = d.createElement('bdi'); bd.dir = 'ltr'; bd.textContent = SITE; pf.textContent = ''; pf.appendChild(bd); pf.appendChild(d.createTextNode(' · זו רשימה כללית בלבד, לא ייעוץ משפטי או הנדסי.')); }
     var tip = d.getElementById('tip');
     var pb = d.getElementById('printBtn');
     if (pb) { pb.addEventListener('click', function () { window.print(); }); }

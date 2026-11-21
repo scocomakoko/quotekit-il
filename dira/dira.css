@@ -30,7 +30,7 @@ label.f>span{display:block;font-size:.9rem;color:var(--tx2)}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 table.defects{width:100%;border-collapse:collapse}
 table.defects th,table.defects td{border:1px solid var(--inp-bd);padding:3px;text-align:start;font-size:.85rem}
-table.defects input,table.defects select{min-height:40px;padding:4px}
+table.defects input,table.defects select{min-height:44px;padding:4px}
 .sig{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px}
 .sig div{border-top:1px solid var(--tx);padding-top:4px;font-size:.9rem}
 .pfoot,.copy2{display:none}
