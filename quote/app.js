@@ -163,6 +163,7 @@ function init(){try{var sv=localStorage.getItem("qk_lang");if(sv==="en"||sv==="h
  $("dlLink").onclick=function(){log("download_click");$("postAsk").hidden=false};
  applyLang();log("page_view")}
 if(typeof document==="undefined"){module.exports={totals:totals,round2:round2,VAT_RATE:VAT_RATE};return}
-if(location.protocol==="file:"){init()}else{
- fetch("payment.config.json").then(function(r){return r.json()}).then(function(c){if(!c||typeof c!=="object")return;if(c.he&&c.he.url==="https://paypal.me/QuoteKitIL/1ILS")PAY.he.url=c.he.url;if(c.en&&c.en.url==="https://paypal.me/QuoteKitIL/1USD")PAY.en.url=c.en.url;if(typeof c.telemetryEndpoint==="string"&&c.telemetryEndpoint){try{var u=new URL(c.telemetryEndpoint,location.href);if(u.protocol==="https:"&&u.origin===location.origin)CFG.telemetryEndpoint=u.href}catch(e){}}}).catch(function(){}).then(init)}
+init();
+if(location.protocol!=="file:"){
+ fetch("payment.config.json").then(function(r){return r.json()}).then(function(c){if(!c||typeof c!=="object")return;if(c.he&&c.he.url==="https://paypal.me/QuoteKitIL/1ILS")PAY.he.url=c.he.url;if(c.en&&c.en.url==="https://paypal.me/QuoteKitIL/1USD")PAY.en.url=c.en.url;if(typeof c.telemetryEndpoint==="string"&&c.telemetryEndpoint){try{var u=new URL(c.telemetryEndpoint,location.href);if(u.protocol==="https:"&&u.origin===location.origin)CFG.telemetryEndpoint=u.href}catch(e){}}}).catch(function(){})}
 })();

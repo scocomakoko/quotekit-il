@@ -69,3 +69,11 @@ body{background:#fff}
 #quote{display:block!important;border:0;box-shadow:none;padding:0;margin:0}
 .pv{position:static}
 }
+/* reserve space for JS-rendered blocks (CLS) */
+#items{min-height:19rem}
+#presetChips{min-height:44px}
+#qMeta{min-height:5.5rem}
+#qTable{min-height:6.5rem}
+#qTot{min-height:5.5rem}
+.langbar,.site-header .wrap{min-height:56px}
+@media print{#items,#presetChips,#qMeta,#qTable,#qTot{min-height:0}}
