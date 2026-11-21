@@ -73,7 +73,7 @@
     }
     if (!inv || n === null) {
       summary = '';
-      ui.err.textContent = !inv ? 'צריך תאריך חשבונית תקין.' : 'צריך מספר ימים בין 0 ל-9999.';
+      ui.err.textContent = !inv ? 'התאריך לא נראה תקין. אפשר לבחור אותו שוב?' : 'כאן צריך מספר ימים, בין 0 ל-9999.';
       ui.due.textContent = '-'; ui.dueSub.textContent = '';
       ui.alt.textContent = '-'; ui.altSub.textContent = '';
       ui.sum.textContent = '';
@@ -135,7 +135,7 @@
     ui.copy.addEventListener('click', function () {
       if (!summary || !root.QK) { return; }
       root.QK.copy(summary, ui.box, function (ok, fb) {
-        ui.msg.textContent = ok ? 'הועתק.' : (fb ? 'אפשר להעתיק ידנית מהתיבה.' : 'ההעתקה לא הצליחה.');
+        ui.msg.textContent = ok ? 'הועתק. אפשר להדביק.' : (fb ? 'אפשר להעתיק ידנית מהתיבה.' : 'ההעתקה לא הצליחה.');
         if (ui.tip) { tipNode(ui.tip); ui.tip.hidden = false; }
       });
     });

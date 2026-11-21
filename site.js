@@ -8,6 +8,8 @@
     if (t) { return t === 'dark'; }
     return !!(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
   }
+  // One-time cleanup of a key that earlier versions wrote.
+  try { localStorage.removeItem('qk_' + 'events'); } catch (e) {}
   var s0 = get();
   if (s0 === 'dark' || s0 === 'light') { root.setAttribute('data-theme', s0); }
 
