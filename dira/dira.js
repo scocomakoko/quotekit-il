@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  var ALLOW = ['https://paypal.me/QuoteKitIL/10ILS'];
+  var ALLOW = ['https://paypal.me/QuoteKitIL/1ILS'];
   var P = 'dira:' + location.pathname + ':';
   var NAME = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') || 'index';
   var SRC = ['index', 'walkthrough', 'wet-rooms', 'rental-condition'];
@@ -297,7 +297,7 @@
     a.href = url;
     a.rel = 'noopener noreferrer';
     a.target = '_blank';
-    a.textContent = '₪10 ב-PayPal';
+    a.textContent = '₪1 ב-PayPal';
     link.textContent = 'עזר לך? אפשר להשאיר ';
     link.appendChild(a);
     link.appendChild(d.createTextNode('. לא חובה.'));
