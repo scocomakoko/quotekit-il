@@ -15,6 +15,8 @@ Pages:
 - [How to write a quote for a client](https://scocomakoko.github.io/quotekit-il/how-to-write-a-quote.html): Hebrew guide
 - [VAT on a quote: licensed vs exempt dealer](https://scocomakoko.github.io/quotekit-il/how-to-calculate-vat-on-a-quote.html): Hebrew explainer
 - [What a quote should include](https://scocomakoko.github.io/quotekit-il/what-a-quote-must-include.html): Hebrew checklist
+- [Quote vs invoice](https://scocomakoko.github.io/quotekit-il/quote-vs-invoice.html): Hebrew guide, what each document is and when to issue it
+- [Renovation quote, worked example](https://scocomakoko.github.io/quotekit-il/renovation-quote-example.html): Hebrew guide, line-by-line example with 18% VAT
 
 More features (all client-side, localStorage only):
 - Quote tool: live preview, copy as WhatsApp message or open wa.me link on tap, automatic quote number, customizable quick-add lines, optional remembered business details.
