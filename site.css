@@ -91,3 +91,8 @@ th,td{border:1px solid var(--bd);padding:8px 10px;text-align:start}
 th{background:var(--soft)}
 .related{margin-top:22px}
 .related .list a{font-weight:600}
+.crumbs{margin:0 0 6px;font-size:.88rem}
+.crumbs ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 6px;color:var(--tx2)}
+.crumbs li+li::before{content:"\203A";margin-inline-end:6px}
+.crumbs a{display:inline-block;padding:10px 2px}
+@media print{.crumbs{display:none}}

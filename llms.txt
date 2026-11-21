@@ -17,6 +17,7 @@ Pages:
 - [What a quote should include](https://scocomakoko.github.io/quotekit-il/what-a-quote-must-include.html): Hebrew checklist
 - [Quote vs invoice](https://scocomakoko.github.io/quotekit-il/quote-vs-invoice.html): Hebrew guide, what each document is and when to issue it
 - [Renovation quote, worked example](https://scocomakoko.github.io/quotekit-il/renovation-quote-example.html): Hebrew guide, line-by-line example with 18% VAT
+- [Reverse VAT calculation](https://scocomakoko.github.io/quotekit-il/reverse-vat-calculation.html): Hebrew guide, finding the pre-VAT amount from a VAT-inclusive price (divide by 1.18)
 
 More features (all client-side, localStorage only):
 - Quote tool: live preview, copy as WhatsApp message or open wa.me link on tap, automatic quote number, customizable quick-add lines, optional remembered business details.
